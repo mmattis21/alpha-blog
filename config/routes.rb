@@ -5,7 +5,10 @@ Rails.application.routes.draw do
 
   root 'pages#home'
   get 'about', to: 'pages#about'
- 
+
+
+  get 'signup', to: 'users#new'
+  resources :users, except: [:new] #ALTERNATIVE post 'users', to: 'users#create'
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
