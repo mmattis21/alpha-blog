@@ -41,7 +41,7 @@
         <% if logged_in? %>
           <li id="makewhite"><%= link_to 'Logout', logout_path, method: :delete %></li>
           <li id="makewhite" class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Your Profile (<%= "Admin" if current_user.admin? %>)<span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Your Profile <%= "(Admin)" if current_user.admin? %><span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li id="makeblack"><%= link_to "Edit Your Profile", edit_user_path(current_user) %></li>
               <li id="makeblack"><%= link_to "View Your Profile", user_path(current_user) %></li>
